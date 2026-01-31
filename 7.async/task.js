@@ -33,16 +33,16 @@ class AlarmClock {
 	}
 
 	// removeClock — удаляет звонки по определённому времени.
-	removeCloc(time) {
+	removeClock(time) {
 		this.alarmCollection = this.alarmCollection.filter(alarm => alarm.time !== time)
 	}
 
 	// getCurrentFormattedTime — возвращает текущее время в строковом формате HH:MM.
 	getCurrentFormattedTime() {
-		const now = new Data();
+		const now = new Date();
 		let hours = now.getHours();
 		let minutes = now.getMinutes();
-		return '${hours}:${minutes}';
+		return `${hours}:${minutes}`;
 
 	}
 	// start — запускает будильник.
